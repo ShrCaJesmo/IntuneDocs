@@ -35,6 +35,10 @@ You create a profile, and it includes all the settings you entered. The next ste
 
 This article shows you how to assign a profile, and includes some information on using scope tags on your profiles.
 
+
+> [!Note]  
+> Removing the targeting of a policy from a device will not revert the setting to some default value, simply remove the management of the setting. To apply a different configuration than the current one, create a new policy defining the desired configuration and switch the targeting. 
+
 ## Assign a device profile
 
 1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
