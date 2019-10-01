@@ -117,6 +117,9 @@ For end-user enrollment instructions, see [Enroll your Windows device in Intune]
 >[!IMPORTANT]
 > If you do not have Auto-MDM enrollment enabled, but you have Windows 10 devices that have been joined to Azure AD, two records will be visible in the Intune console after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account. 
 
+>[!IMPORTANT]
+> This enrollment method promotes the enrolling AzureAD user to local administrator - removing this access will break management. If it's required that the user be a standard user, Autopilot or GPO enrollment may be a better fit.
+
 For more information about end-user tasks, see [Resources about the end-user experience with Microsoft Intune](end-user-educate.md).
 
 ## Next steps
