@@ -385,6 +385,39 @@ This issue is usually caused by incorrectly delegating permissions to the organi
 10. Under **Permissions**, select the **Full Control** check box. This action selects all the other options.
 11. Select **Next** > **Finish**.
 
+### Autopilot discovery failed to find a valid MDM
+
+Autopilot discovery failed to find a valid MDM. Confirm that the AAD tenant is properly provisioned and licensed for exactly one MDM. HRESULT = 0x81036501
+AutopilotManager failed during device enrollment phase DeviceDiscovery. HRESULT = 0x81036501
+
+**Cause:** This error can be caused by a duplicate entry in **Azure Active Directory** > **Mobility (MDM & MAM)** called "Microsoft Intune Enrollment"
+
+#### Resolution
+1. Go to **Azure Active Directory** > **Mobility (MDM & MAM)**
+2. Validate there's two entries - **Microsoft Intune** and **Microsoft Intune Enrollment**
+3. Click on the **Microsoft Intune Enrollment** entry, validate there is only MDM scope settings but not MAM
+4. Click the delete button
+
+#### Reversal Steps
+- If you would like to recover this enterprise app, it can be recreated using the following AzureAD powershell snippet: 
+    ```powershell
+    New-AzureADServicePrincipal -AppId d4ebce55-015a-49b5-a083-c84d1797ae8c
+    ```
+-If you accidentally deleted the good entry, it can be recovered with the following:
+    ```powershell
+    New-AzureADServicePrincipal -AppId 0000000a-0000-0000-c000-000000000000
+    ```
+
+### 2147549183 (0x8000FFFF)
+
+2147549183 (0x8000FFFF)
+
+**Cause:** MDM enrollment hasn't been configured yet on Azure AD, or the enrollment URL isn't expected.
+
+#### Resolution
+1. [Enable Automatic Enrollment](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
+
+
 ## Next steps
 
 - [Troubleshoot device enrollment in Intune](../troubleshoot-device-enrollment-in-intune.md)
