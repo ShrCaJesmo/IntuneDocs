@@ -403,7 +403,7 @@ AutopilotManager failed during device enrollment phase DeviceDiscovery. HRESULT 
     ```powershell
     New-AzureADServicePrincipal -AppId d4ebce55-015a-49b5-a083-c84d1797ae8c
     ```
--If you accidentally deleted the good entry, it can be recovered with the following:
+- If you accidentally deleted the good entry, it can be recovered with the following:
     ```powershell
     New-AzureADServicePrincipal -AppId 0000000a-0000-0000-c000-000000000000
     ```
@@ -415,7 +415,7 @@ AutopilotManager failed during device enrollment phase DeviceDiscovery. HRESULT 
 **Cause:** MDM enrollment hasn't been configured yet on Azure AD, or the enrollment URL isn't expected.
 
 #### Resolution
-1. [Enable Automatic Enrollment](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
+- [Enable Automatic Enrollment](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
 
 
 ## Next steps
