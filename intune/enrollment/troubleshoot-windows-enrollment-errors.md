@@ -407,17 +407,7 @@ AutopilotManager failed during device enrollment phase DeviceDiscovery. HRESULT 
     ```powershell
     New-AzureADServicePrincipal -AppId 0000000a-0000-0000-c000-000000000000
     ```
-
-### 2147549183 (0x8000FFFF)
-
-2147549183 (0x8000FFFF)
-
-**Cause:** MDM enrollment hasn't been configured yet on Azure AD, or the enrollment URL isn't expected.
-
-#### Resolution
-- [Enable Automatic Enrollment](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
-
-
+    
 ## Next steps
 
 - [Troubleshoot device enrollment in Intune](../troubleshoot-device-enrollment-in-intune.md)
