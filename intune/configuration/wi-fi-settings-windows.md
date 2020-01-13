@@ -146,8 +146,11 @@ Select **OK** > **Create** to save your changes. The profile is created and is s
         - **Unencrypted password (PAP)**
         - **Challenge Handshake (CHAP)**
         - **Microsoft CHAP (MS-CHAP)**
-        - **Microsoft CHAP Version 2 (MS-CHAP v2)**
-
+        - **Microsoft CHAP Version 2 (MS-CHAP v2)** 
+        
+        > [!NOTE]
+        > Setting it to Username and Password will only persist until the next time the profile is modified. If you set it to Username and Password, save, then edit the policy again, even if you don't change the authentication method, it will revert itself to Certificates. As such, after each modification, open the settings again and set it back to Username and Password. If the save action doesn't include a change of setting to Username and Password, it reverts to Certificate.
+        
       **Identity privacy (outer identity)**: Use with **EAP-TTLS** EAP type. Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
 - **Company Proxy settings**: Choose to use the proxy settings within your organization. Your options:
